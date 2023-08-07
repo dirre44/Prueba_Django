@@ -7,6 +7,23 @@
 </head>
 <body>
     <h1>Esta es mi primera plantilla</h1>
-    <p>aca estoy ecribiendo</p>
+    <p style="color: blue;">aca estoy ecribiendo</p>
+
+    <p>Nombre: {{ nombre }}</p>
+    <p>Apellido: {{ apellido }}</p>
+    <p>Edad: {{ edad }}</p>
+    <h3>Lista de notas:</h3>
+
+    {% for nota in lista_de_notas %}
+
+        {% if nota < 7 %}
+            <p style="color: red;">Notas: {{ nota }}</p>
+        {% else %}
+            <p style="color: blue;">Notas: {{ nota }}</p>
+        {% endif %}      
+
+    {% endfor %}
+
+
 </body>
 </html>
